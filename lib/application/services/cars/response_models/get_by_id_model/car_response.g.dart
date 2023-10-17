@@ -8,10 +8,10 @@ part of 'car_response.dart';
 
 _$CarResponseImpl _$$CarResponseImplFromJson(Map<String, dynamic> json) =>
     _$CarResponseImpl(
-      car: Car.fromJson(json['car'] as Map<String, dynamic>),
+      car: Car.fromJson(json['Car'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$CarResponseImplToJson(_$CarResponseImpl instance) =>
     <String, dynamic>{
-      'car': instance.car,
+      'Car': instance.car,
     };

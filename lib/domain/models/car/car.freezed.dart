@@ -22,7 +22,7 @@ Car _$CarFromJson(Map<String, dynamic> json) {
 mixin _$Car {
   int get id => throw _privateConstructorUsedError;
   String get car => throw _privateConstructorUsedError;
-  @JsonKey(name: "car_mode")
+  @JsonKey(name: "car_model")
   String get model => throw _privateConstructorUsedError;
   @JsonKey(name: 'car_color')
   String get color => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $CarCopyWith<$Res> {
   $Res call(
       {int id,
       String car,
-      @JsonKey(name: "car_mode") String model,
+      @JsonKey(name: "car_model") String model,
       @JsonKey(name: 'car_color') String color,
       @JsonKey(name: 'car_model_year') int modelYear,
       @JsonKey(name: 'car_vin') String vin,
@@ -122,7 +122,7 @@ abstract class _$$CarImplCopyWith<$Res> implements $CarCopyWith<$Res> {
   $Res call(
       {int id,
       String car,
-      @JsonKey(name: "car_mode") String model,
+      @JsonKey(name: "car_model") String model,
       @JsonKey(name: 'car_color') String color,
       @JsonKey(name: 'car_model_year') int modelYear,
       @JsonKey(name: 'car_vin') String vin,
@@ -191,7 +191,7 @@ class _$CarImpl implements _Car {
   const _$CarImpl(
       {required this.id,
       this.car = "",
-      @JsonKey(name: "car_mode") this.model = "",
+      @JsonKey(name: "car_model") required this.model,
       @JsonKey(name: 'car_color') this.color = "",
       @JsonKey(name: 'car_model_year') required this.modelYear,
       @JsonKey(name: 'car_vin') required this.vin,
@@ -207,7 +207,7 @@ class _$CarImpl implements _Car {
   @JsonKey()
   final String car;
   @override
-  @JsonKey(name: "car_mode")
+  @JsonKey(name: "car_model")
   final String model;
   @override
   @JsonKey(name: 'car_color')
@@ -269,7 +269,7 @@ abstract class _Car implements Car {
   const factory _Car(
       {required final int id,
       final String car,
-      @JsonKey(name: "car_mode") final String model,
+      @JsonKey(name: "car_model") required final String model,
       @JsonKey(name: 'car_color') final String color,
       @JsonKey(name: 'car_model_year') required final int modelYear,
       @JsonKey(name: 'car_vin') required final String vin,
@@ -283,7 +283,7 @@ abstract class _Car implements Car {
   @override
   String get car;
   @override
-  @JsonKey(name: "car_mode")
+  @JsonKey(name: "car_model")
   String get model;
   @override
   @JsonKey(name: 'car_color')

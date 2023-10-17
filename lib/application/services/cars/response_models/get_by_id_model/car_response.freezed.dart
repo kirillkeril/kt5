@@ -20,6 +20,7 @@ CarResponse _$CarResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CarResponse {
+  @JsonKey(name: "Car")
   Car get car => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -34,7 +35,7 @@ abstract class $CarResponseCopyWith<$Res> {
           CarResponse value, $Res Function(CarResponse) then) =
       _$CarResponseCopyWithImpl<$Res, CarResponse>;
   @useResult
-  $Res call({Car car});
+  $Res call({@JsonKey(name: "Car") Car car});
 
   $CarCopyWith<$Res> get car;
 }
@@ -79,7 +80,7 @@ abstract class _$$CarResponseImplCopyWith<$Res>
       __$$CarResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Car car});
+  $Res call({@JsonKey(name: "Car") Car car});
 
   @override
   $CarCopyWith<$Res> get car;
@@ -110,12 +111,13 @@ class __$$CarResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CarResponseImpl implements _CarResponse {
-  const _$CarResponseImpl({required this.car});
+  const _$CarResponseImpl({@JsonKey(name: "Car") required this.car});
 
   factory _$CarResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$CarResponseImplFromJson(json);
 
   @override
+  @JsonKey(name: "Car")
   final Car car;
 
   @override
@@ -150,12 +152,14 @@ class _$CarResponseImpl implements _CarResponse {
 }
 
 abstract class _CarResponse implements CarResponse {
-  const factory _CarResponse({required final Car car}) = _$CarResponseImpl;
+  const factory _CarResponse({@JsonKey(name: "Car") required final Car car}) =
+      _$CarResponseImpl;
 
   factory _CarResponse.fromJson(Map<String, dynamic> json) =
       _$CarResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: "Car")
   Car get car;
   @override
   @JsonKey(ignore: true)

@@ -24,6 +24,7 @@ class CarsService implements ICarsService {
   @override
   Future<Car> getById(int id) async {
     var res = await httpClient.get('cars/$id');
+    print(res.data);
     CarResponse carData = CarResponse.fromJson(res.data);
     return carData.car;
   }

@@ -24,7 +24,7 @@ class Car with _$Car {
   const factory Car({
     required int id,
     @Default("") String car,
-    @Default("") @JsonKey(name: "car_mode") String model,
+    @JsonKey(name: "car_model") required String model,
     @Default("") @JsonKey(name: 'car_color') String color,
     @JsonKey(name: 'car_model_year') required int modelYear,
     @JsonKey(name: 'car_vin') required String vin,
