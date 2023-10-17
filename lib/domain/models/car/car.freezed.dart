@@ -187,8 +187,8 @@ class __$$CarImplCopyWithImpl<$Res> extends _$CarCopyWithImpl<$Res, _$CarImpl>
 
 /// @nodoc
 @JsonSerializable()
-class _$CarImpl implements _Car {
-  const _$CarImpl(
+class _$CarImpl extends _Car {
+  _$CarImpl(
       {required this.id,
       this.car = "",
       @JsonKey(name: "car_model") required this.model,
@@ -196,7 +196,8 @@ class _$CarImpl implements _Car {
       @JsonKey(name: 'car_model_year') required this.modelYear,
       @JsonKey(name: 'car_vin') required this.vin,
       @PriceConverter() required this.price,
-      required this.availability});
+      required this.availability})
+      : super._();
 
   factory _$CarImpl.fromJson(Map<String, dynamic> json) =>
       _$$CarImplFromJson(json);
@@ -265,8 +266,8 @@ class _$CarImpl implements _Car {
   }
 }
 
-abstract class _Car implements Car {
-  const factory _Car(
+abstract class _Car extends Car {
+  factory _Car(
       {required final int id,
       final String car,
       @JsonKey(name: "car_model") required final String model,
@@ -275,6 +276,7 @@ abstract class _Car implements Car {
       @JsonKey(name: 'car_vin') required final String vin,
       @PriceConverter() required final double price,
       required final bool availability}) = _$CarImpl;
+  _Car._() : super._();
 
   factory _Car.fromJson(Map<String, dynamic> json) = _$CarImpl.fromJson;
 

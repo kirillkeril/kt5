@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:get/get.dart';
 
 part 'car.freezed.dart';
 part 'car.g.dart';
@@ -21,7 +24,9 @@ class PriceConverter implements JsonConverter<double, String>{
 
 @freezed
 class Car with _$Car {
-  const factory Car({
+  Car._();
+
+  factory Car({
     required int id,
     @Default("") String car,
     @JsonKey(name: "car_model") required String model,
@@ -31,6 +36,8 @@ class Car with _$Car {
     @PriceConverter() required double price,
     required bool availability,
   }) = _Car;
+
+  double get rating => (Random().nextDouble() * 2) + 3;
 
   factory Car.fromJson(Map<String, Object?> json) => _$CarFromJson(json);
 }

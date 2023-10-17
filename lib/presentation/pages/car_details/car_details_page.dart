@@ -44,9 +44,9 @@ class CarDetails extends GetView<CarDetailsController> {
                   padding: const EdgeInsets.only(top: 32, left: 16, right: 16),
                   child: Column(
                     children: [
-                      Text(controller.car!.model,
+                      Text("${controller.car!.model} ${controller.car!.modelYear}г.",
                           style: const TextStyle(fontSize: 20)),
-                      Text(controller.car!.vin,
+                      Text("VIN: ${controller.car!.vin}",
                           style: const TextStyle(fontSize: 12)),
                       Text(controller.car!.color),
                       Text("\$ ${controller.car!.price}",

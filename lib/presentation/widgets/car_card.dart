@@ -26,7 +26,7 @@ class CarCard extends StatelessWidget {
       trailing: Column(
         children: [
           const Icon(Icons.star),
-          Text("${Random().nextInt(3) + 2}"),
+          Text(car.rating.toStringAsFixed(2)),
         ],
       ),
     );
